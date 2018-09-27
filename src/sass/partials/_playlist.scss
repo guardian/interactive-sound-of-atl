@@ -47,6 +47,7 @@
     width: auto;
     margin: 0;
     font-family: 'Guardian Egyptian Web';
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.2;
 
@@ -60,7 +61,6 @@
 
     @include mq(desktop) {
         width: 260px;
-        font-size: 22px;
     }
 
     @include mq(leftCol) {
@@ -112,6 +112,10 @@
             color: $c-yellow;
         }
     }
+
+    p {
+        display: inline-block;
+    }
 }
 
 .uit-track__button {
@@ -120,11 +124,9 @@
     height: 60px;
     width: 60px;
     border-radius: 36px;
-    padding: 15px;
     box-sizing: border-box;
     float: left;
     position: relative;
-    display: none;
 
     .sound-of--enhanced & {
         display: block;
@@ -152,7 +154,7 @@
 }
 
 .uit-track__artist-image {
-    background: $c-yellow;
+    background: $c-light-grey;
     background-position: center center;
     background-size: cover;
     height: 60px;

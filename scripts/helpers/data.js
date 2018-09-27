@@ -51,11 +51,11 @@ function sortResults() {
 
 function convertImageLinks() {
     for (var i = 0; i < data.playlist.length; i++) {
-        if (data.playlist[i].artistimage) {
-            data.playlist[i].artistimage = convertToGridUrl(data.playlist[i].artistimage, 1000);
+        if (data.playlist[i].artistImage) {
+            data.playlist[i].artistImage = convertToGridUrl(data.playlist[i].artistImage, 1000);
         }
-        if (data.playlist[i].pickedbyimage) {
-            data.playlist[i].pickedbyimage = convertToGridUrl(data.playlist[i].pickedbyimage, 140);
+        if (data.playlist[i].pickedByImage) {
+            data.playlist[i].pickedByImage = convertToGridUrl(data.playlist[i].pickedByImage, 140);
         }
     }
 
