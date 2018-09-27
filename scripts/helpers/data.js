@@ -76,15 +76,11 @@ function convertToGridUrl(url, size) {
 module.exports = function getData() {
     var isDone = false;
 
-    console.log('hey');
-
     fetchData(function(result) {
         data = result;
         data = sortResults();
         data = setFurniture();
         data = convertImageLinks();
-
-        console.log(data);
 
         isDone = true;
     });
