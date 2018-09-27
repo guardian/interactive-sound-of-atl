@@ -104,6 +104,7 @@ span.uit-track__artist {
     color: $c-brown;
     display: block;
     font-size: 14px;
+    padding-top: 4px;
     font-weight: normal;
     font-family: 'Guardian Sans Web';
 
@@ -147,7 +148,7 @@ span.uit-track__artist {
         display: none;
     }
 
-    .sound-of[data-playing='true'] .is-current & {
+    .uit[data-playing='true'] .is-current & {
         svg {
             display: none;
         }
