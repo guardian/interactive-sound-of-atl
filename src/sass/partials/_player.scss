@@ -59,7 +59,7 @@
 }
 
 .uit-player__button {
-    border: 1px solid $c-yellow;
+    border: 1px solid $c-light-brown;
     height: 60px;
     width: 60px;
     border-radius: 36px;
@@ -69,7 +69,7 @@
     svg {
         width: 100%;
         height: 100%;
-        fill: $c-yellow;
+        fill: $c-light-brown;
     }
 }
 
@@ -79,14 +79,14 @@
     left: 10px;
     z-index: 2;
     border: 0;
-    background-color: $c-yellow;
+    background-color: $c-brown;
 
     @include mq(mobileLandscape) {
         left: 20px;
     }
 
     svg {
-        fill: $c-black;
+        fill: $c-white;
         display: none;
     }
 
@@ -170,7 +170,7 @@
 }
 
 .uit-player__info-artist {
-    color: $c-yellow;
+    color: $c-light-brown;
     display: block;
 }
 
