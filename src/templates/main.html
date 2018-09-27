@@ -1,6 +1,17 @@
 <div class='uit'>
     {{> partials/header }}
     {{> partials/body }}
+
+    <div class='uit-playlist'>
+        <div class='uit-container'>
+            {{#each playlist}}
+                {{> partials/track }}
+            {{/each}}
+        </div>
+    </div>
+
+    {{> partials/player }}
+
     {{> partials/related }}
 </div>
 

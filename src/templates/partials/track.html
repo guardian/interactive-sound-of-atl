@@ -1,0 +1,32 @@
+<li class='uit-track is-closed' data-platform='{{ platform }}' data-{{ platform }}='{{ url }}' data-track='{{ track }}' data-artist='{{ artist }}'>
+    <div class='uit-track__row'>
+        <div class='uit-track__track-wrapper'>
+            <div class='uit-track__button'>
+                {{> icons/interactive }}
+                {{> icons/pause }}
+            </div>
+    
+            <div class='uit-track__artist-image' style='background-image: url({{ artistImage.treated-yellow.fallback }})'></div>
+    
+            <h1 class='uit-track__track'>
+                <span class='uit-track__artist'>{{ artist }}</span>
+                <span>{{ track }}</span>
+            </h1>
+        </div>
+
+        <blockquote class='uit-track__quote'>{{ quote }}
+            <cite class='uit-track__cite'>Picked by {{{ marked pickedBy }}}</cite>
+        </blockquote>
+
+        <div class='uit-track__expand-button'>
+            {{> icons/reveal }}
+        </div>
+    </div>
+    <div class='uit-track__hidden'>
+        <div class='uit-track__picked-image' style='background-image: url({{ pickedByImage.treated-blue.fallback }})'></div>
+        <cite class='uit-track__cite'>Picked by {{{ pickedBy }}}</cite>
+<!--         Image -->
+        <div class='uit-track__image-credit'> {{ pickedByImage.credit }}</div>
+        <div class='uit-track__body'>{{{ body }}}</div>
+    </div>
+</li>

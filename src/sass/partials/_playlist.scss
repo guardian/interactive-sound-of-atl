@@ -1,0 +1,298 @@
+.uit-playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.uit-track {
+    position: relative;
+    padding: 10px 10px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    border-top: 1px solid $c-light-grey;
+
+    @include mq(mobileLandscape) {
+        padding: 10px 20px;
+    }
+}
+
+.uit-track__row {
+    position: relative;
+    display: flex;
+}
+
+.uit-track__track-wrapper {
+    position: relative;
+    margin-right: 20px;
+    flex-grow: 1;
+
+    @include mq(tablet) {
+        width: 380px;
+        flex-shrink: 0;
+    }
+
+    @include mq(desktop) {
+        flex-grow: 0;
+    }
+
+    @include mq(leftCol) {
+        width: 540px;
+    }
+}
+
+.uit-track__track {
+    position: absolute;
+    left: 70px;
+    right: 0;
+    width: auto;
+    margin: 0;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 400;
+    line-height: 1.2;
+
+    @include mq(phablet) {
+        left: 120px;
+    }
+
+    @include mq(tablet) {
+        width: 340px;
+    }
+
+    @include mq(desktop) {
+        width: 260px;
+        font-size: 22px;
+    }
+
+    @include mq(leftCol) {
+        width: 420px;
+    }
+
+    span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.uit-track__quote {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+    flex-shrink: 0;
+    width: 380px;
+    margin-right: 20px;
+    display: none;
+
+    @include mq(desktop) {
+        display: block;
+        width: 460px;
+    }
+
+    @include mq(wide) {
+        width: 540px;
+    }
+}
+
+.uit-track__cite {
+    font-style: normal;
+    color: $c-brown;
+    display: block;
+    font-size: 14px;
+    font-family: 'Guardian Sans Web';
+
+    a {
+        color: $c-brown;
+        border-bottom: rgba($c-yellow, 0.3) 1px solid;
+
+        &:hover {
+            text-decoration: none;
+            border-bottom-color: $c-yellow;
+            color: $c-yellow;
+        }
+    }
+}
+
+.uit-track__button {
+    z-index: 5;
+    background-color: $c-black;
+    height: 60px;
+    width: 60px;
+    border-radius: 36px;
+    padding: 15px;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    display: none;
+
+    .sound-of--enhanced & {
+        display: block;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: $c-white;
+    }
+
+    .svg--pause {
+        display: none;
+    }
+
+    .sound-of[data-playing='true'] .is-current & {
+        .svg--play {
+            display: none;
+        }
+
+        .svg--pause {
+            display: block;
+        }
+    }
+}
+
+.uit-track__artist-image {
+    background: $c-yellow;
+    background-position: center center;
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+    float: left;
+    display: inline-block;
+    flex-shrink: 0;
+    display: none;
+    margin-left: -12px;
+
+    @include mq(phablet) {
+        display: block;
+    }
+}
+
+.uit-track__expand-button {
+    border: 1px solid $c-brown;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    transition: opacity .5s ease-out;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-out;
+
+    .svg {
+        width: 100%;
+        height: 100%;
+        fill: $c-brown;
+    }
+
+    .is-expanded & {
+        transform: rotate(45deg);
+    }
+}
+
+.uit-track__hidden {
+    position: relative;
+    will-change: height;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+
+    .is-closed & {
+        max-height: 0;
+        visibility: hidden;
+        transition: all 0.1s;
+    }
+
+    .is-expanded & {
+        padding-top: 12px;
+        max-height: 2500px;
+        visibility: visible;
+
+        @include mq(desktop) {
+            padding-top: 0;
+        }
+    }
+
+    img {
+        width: calc(100% + 40px);
+        margin: 0;
+        display: none;
+
+        @include mq(desktop) {
+            width: 100%;
+        }
+
+        .is-expanded & {
+            display: block;
+        }
+    }
+
+    .uit-track__cite {
+        position: absolute;
+        left: 70px;
+        top: 18px;
+
+        @include mq(desktop) {
+            display: none;
+        }
+    }
+
+    @include mq(desktop) {
+        margin-left: 400px;
+    }
+
+    @include mq(leftCol) {
+        margin-left: 560px;
+        max-width: 620px;
+    }
+}
+
+.uit-track__picked-image {
+    background: $c-brown;
+    background-position: center center;
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 4px;
+    margin-bottom: -32px;
+    position: relative;
+    z-index: 1;
+
+    @include mq(desktop) {
+        margin-left: 5px;
+    }
+}
+
+.uit-track__image-credit {
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    line-height: 1.2;
+    color: $c-dark-grey;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    svg {
+        fill: $c-dark-grey;
+        height: 12px;
+    }
+}
+
+.uit-track__body {
+    font-family: 'Guardian Text Egyptian Web';
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    max-width: 620px;
+
+    a {
+        color: $c-brown;
+        border-bottom: 1px solid $c-yellow;
+
+        &:hover {
+            color: $c-yellow;
+            text-decoration: none;
+        }
+    }
+}

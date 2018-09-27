@@ -1,0 +1,18 @@
+<div class='sound-of-intro'>
+    <div class='gs-container'>
+        <div class='sound-of-intro__body'>
+            {{{ furniture.intro }}}
+
+            <div class='sound-of-intro__buttons'>
+                {{#if furniture.spotifyUrl }}
+                    <a class='sound-of-intro__button sound-of-intro__button--spotify' href='{{ furniture.spotifyUrl }}'>Listen on Spotify</a>
+                {{/if}}
+                {{#if furniture.appleMusicUrl }}
+                    <a class='sound-of-intro__button sound-of-intro__button--apple' href='{{ furniture.appleMusicUrl }}'>Listen on Apple Music</a>
+                {{/if}}
+            </div>
+        </div>
+
+        <img class='sound-of-intro__image' src='@@assetPath@@/assets/images/cutouts.png' />
+    </div>
+</div>
