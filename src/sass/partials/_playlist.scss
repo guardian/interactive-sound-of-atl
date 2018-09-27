@@ -143,16 +143,16 @@ span.uit-track__artist {
         fill: $c-white;
     }
 
-    .svg--pause {
+    svg:nth-of-type(2) {
         display: none;
     }
 
     .sound-of[data-playing='true'] .is-current & {
-        .svg--play {
+        svg {
             display: none;
         }
 
-        .svg--pause {
+        svg:nth-of-type(2) {
             display: block;
         }
     }
@@ -204,6 +204,15 @@ span.uit-track__artist {
     overflow: hidden;
     transition: all 0.5s ease-in-out;
 
+    @include mq(desktop) {
+        margin-left: 400px;
+    }
+
+    @include mq(leftCol) {
+        margin-left: 560px;
+        max-width: 620px;
+    }
+
     .is-closed & {
         max-height: 0;
         visibility: hidden;
@@ -220,76 +229,25 @@ span.uit-track__artist {
         }
     }
 
-    img {
-        width: calc(100% + 40px);
-        margin: 0;
-        display: none;
-
-        @include mq(desktop) {
-            width: 100%;
-        }
-
-        .is-expanded & {
-            display: block;
-        }
-    }
-
     .uit-track__cite {
-        position: absolute;
-        left: 70px;
-        top: 18px;
-
         @include mq(desktop) {
             display: none;
         }
     }
-
-    @include mq(desktop) {
-        margin-left: 400px;
-    }
-
-    @include mq(leftCol) {
-        margin-left: 560px;
-        max-width: 620px;
-    }
 }
 
-.uit-track__picked-image {
-    background: $c-brown;
-    background-position: center center;
-    background-size: cover;
-    height: 60px;
-    width: 60px;
-    border-radius: 30px;
-    overflow: hidden;
-    margin-top: 4px;
-    margin-bottom: -32px;
-    position: relative;
-    z-index: 1;
+.uit-track__image {
+    margin: 12px 0 6px;
+    display: none;
+    width: 100%;
 
-    @include mq(desktop) {
-        margin-left: 5px;
-    }
-}
-
-.uit-track__image-credit {
-    font-family: 'Guardian Sans Web';
-    font-size: 14px;
-    line-height: 1.2;
-    color: $c-dark-grey;
-    margin-top: 8px;
-    margin-bottom: 8px;
-
-    svg {
-        fill: $c-dark-grey;
-        height: 12px;
+    .is-expanded & {
+        display: block;
     }
 }
 
 .uit-track__body {
-    font-family: 'Guardian Text Egyptian Web';
-    font-size: 16px;
-    line-height: 24px;
+    @include bodyCopy();
     margin-bottom: 12px;
     max-width: 620px;
 

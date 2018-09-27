@@ -2,5 +2,7 @@
 window.$ = require('./vendor/jquery.js');
 
 var share = require('./modules/share.js');
+var toggles = require('./modules/toggles.js');
 
 share.init();
+toggles.init();
