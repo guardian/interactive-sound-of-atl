@@ -110,12 +110,11 @@ span.uit-track__artist {
 
     a {
         color: $c-brown;
-        border-bottom: rgba($c-yellow, 0.3) 1px solid;
+        border-bottom: rgba($c-light-brown, 0.3) 1px solid;
 
         &:hover {
             text-decoration: none;
-            border-bottom-color: $c-yellow;
-            color: $c-yellow;
+            color: $c-light-brown;
         }
     }
 
@@ -254,11 +253,11 @@ span.uit-track__artist {
 
     a {
         color: $c-brown;
-        border-bottom: 1px solid $c-yellow;
+        border-bottom: rgba($c-light-brown, 0.3) 1px solid;
 
         &:hover {
-            color: $c-yellow;
             text-decoration: none;
+            color: $c-light-brown;
         }
     }
 }

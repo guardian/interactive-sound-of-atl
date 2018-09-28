@@ -4,6 +4,16 @@
         margin-bottom: 18px;
     }
 
+    a {
+        color: $c-brown;
+        border-bottom: rgba($c-light-brown, 0.3) 1px solid;
+
+        &:hover {
+            text-decoration: none;
+            color: $c-light-brown;
+        }
+    }
+
     .uit-content {
         padding-bottom: 12px;
     }
