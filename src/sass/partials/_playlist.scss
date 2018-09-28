@@ -48,12 +48,13 @@
     line-height: 1.2;
 
     @include mq(phablet) {
-        left: 120px;
+        left: 90px;
     }
 
     @include mq(tablet) {
         width: 340px;
         font-size: 24px;
+        left: 120px;
     }
 
     @include mq(desktop) {
