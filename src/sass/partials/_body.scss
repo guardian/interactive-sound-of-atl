@@ -2,15 +2,15 @@
     p {
         @include bodyCopy();
         margin-bottom: 18px;
-    }
 
-    a {
-        color: $c-brown;
-        border-bottom: rgba($c-light-brown, 0.3) 1px solid;
+        a {
+            color: $c-brown;
+            border-bottom: rgba($c-light-brown, 0.3) 1px solid;
 
-        &:hover {
-            text-decoration: none;
-            color: $c-light-brown;
+            &:hover {
+                text-decoration: none;
+                color: $c-light-brown;
+            }
         }
     }
 
