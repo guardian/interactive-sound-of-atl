@@ -19,7 +19,7 @@
 
 .uit-track__track-wrapper {
     position: relative;
-    margin-right: 20px;
+    margin-right: 6px;
     flex-grow: 1;
 
     @include mq(tablet) {
@@ -38,12 +38,12 @@
 
 .uit-track__track {
     position: absolute;
-    left: 70px;
+    left: 58px;
     right: 0;
     width: auto;
     margin: 0;
     font-family: 'Guardian Egyptian Web';
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2;
 
@@ -53,10 +53,11 @@
 
     @include mq(tablet) {
         width: 340px;
+        font-size: 24px;
     }
 
     @include mq(desktop) {
-        width: 260px;
+        width: 340px;
     }
 
     @include mq(leftCol) {
@@ -92,6 +93,7 @@ span.uit-track__artist {
     @include mq(desktop) {
         display: block;
         width: 460px;
+        margin-left: 14px;
     }
 
     @include mq(wide) {
@@ -128,13 +130,18 @@ span.uit-track__artist {
 .uit-track__button {
     z-index: 5;
     background-color: $c-black;
-    height: 60px;
-    width: 60px;
+    height: 48px;
+    width:  48px;
     border-radius: 36px;
     box-sizing: border-box;
     float: left;
     position: relative;
     transition: background 0.2s linear;
+
+    @include mq(tablet) {
+        height: 60px;
+        width: 60px;
+    }
 
     &:hover {
         background-color: $c-dark-brown;
@@ -169,8 +176,8 @@ span.uit-track__artist {
     background: $c-light-grey;
     background-position: center center;
     background-size: cover;
-    height: 60px;
-    width: 60px;
+    height: 48px;
+    width: 48px;
     border-radius: 30px;
     overflow: hidden;
     float: left;
@@ -182,16 +189,26 @@ span.uit-track__artist {
     @include mq(phablet) {
         display: block;
     }
+
+    @include mq(tablet) {
+        height: 60px;
+        width: 60px;
+    }
 }
 
 .uit-track__expand-button {
     border: 1px solid $c-brown;
-    height: 60px;
-    width: 60px;
+    height: 48px;
+    width: 48px;
     border-radius: 30px;
     box-sizing: border-box;
     flex-shrink: 0;
     transition: all 0.2s ease-out;
+
+    @include mq(tablet) {
+        height: 60px;
+        width: 60px;
+    }
 
     &:hover {
         transform: rotate(10deg);
