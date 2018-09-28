@@ -6,10 +6,12 @@
         a {
             color: $c-brown;
             border-bottom: rgba($c-light-brown, 0.3) 1px solid;
+            transition: all 0.2s linear;
 
             &:hover {
                 text-decoration: none;
-                color: $c-light-brown;
+                color: $c-dark-brown;
+                border-bottom-color: $c-dark-brown;
             }
         }
     }
@@ -33,4 +35,8 @@
 
 .uit-button {
     @include button($c-white, $c-brown);
+
+    &:hover {
+        background-color: $c-dark-brown;
+    }
 }

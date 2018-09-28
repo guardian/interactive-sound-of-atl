@@ -111,10 +111,12 @@ span.uit-track__artist {
     a {
         color: $c-brown;
         border-bottom: rgba($c-light-brown, 0.3) 1px solid;
+        transition: all 0.2s linear;
 
         &:hover {
             text-decoration: none;
-            color: $c-light-brown;
+            color: $c-dark-brown;
+            border-bottom-color: $c-dark-brown;
         }
     }
 
@@ -188,14 +190,20 @@ span.uit-track__artist {
     width: 60px;
     border-radius: 30px;
     box-sizing: border-box;
-    transition: opacity .5s ease-out;
     flex-shrink: 0;
-    transition: transform 0.2s ease-out;
+    transition: all 0.2s ease-out;
 
-    .svg {
-        width: 100%;
-        height: 100%;
-        fill: $c-brown;
+    &:hover {
+        transform: rotate(10deg);
+
+        svg {
+            fill: $c-brown;
+        }
+    }
+
+    svg {
+        fill: $c-black;
+        transition: fill 0.2s ease-out;
     }
 
     .is-expanded & {
@@ -259,10 +267,12 @@ span.uit-track__artist {
     a {
         color: $c-brown;
         border-bottom: rgba($c-light-brown, 0.3) 1px solid;
+        transition: all 0.2s linear;
 
         &:hover {
             text-decoration: none;
-            color: $c-light-brown;
+            color: $c-dark-brown;
+            border-bottom-color: $c-dark-brown;
         }
     }
 }

@@ -12,16 +12,19 @@
     float: left;
     margin-right: 4px;
     border: 1px solid $c-brown;
+    transition: all 0.2s linear;
 
     .uit-icon {
         fill: $c-brown;
         width: 100%;
         height: 100%;
         margin: auto;
+        transform: all 0.2s linear;
     }
 
     &:hover {
-        background-color: $c-brown;
+        background-color: $c-dark-brown;
+        border-color: $c-dark-brown;
 
         .uit-icon {
             fill: $c-white;
