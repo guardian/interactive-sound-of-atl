@@ -59,7 +59,7 @@
 }
 
 .uit-player__button {
-    border: 1px solid $c-light-brown;
+    border: 1px solid $c-white;
     height: 60px;
     width: 60px;
     border-radius: 36px;
@@ -80,9 +80,15 @@
     z-index: 2;
     border: 0;
     background-color: $c-brown;
+    cursor: pointer;
+    transition: background 0.2s linear;
 
     @include mq(mobileLandscape) {
         left: 20px;
+    }
+
+    &:hover {
+        background-color: $c-dark-brown;
     }
 
     svg {
@@ -106,7 +112,7 @@
 .uit-player__button--previous {
     position: absolute;
     top: 10px;
-    left: 20px;
+    left: 0px;
     display: none;
 
     @include mq(tablet) {
@@ -121,7 +127,7 @@
 .uit-player__button--next {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 0;
     display: none;
 
     @include mq(mobileLandscape) {
@@ -129,20 +135,21 @@
     }
 
     @include mq(wide) {
-        right: 100px;
+        right: 80px;
     }
 }
 
 .uit-player__content {
-    padding: 10px;
+    padding: 10px 0;
     position: relative;
 
     @include mq(mobileLandscape) {
-        padding: 10px 20px;
+        padding: 10px 0;
     }
 
     @include mq(phablet) {
         margin-left: 320px;
+        padding: 12px 0;
     }
 
     @include mq(desktop) {
@@ -151,26 +158,26 @@
 }
 
 .uit-player__info {
-    color: $c-white;
-    font-weight: 400;
+    color: $c-light-brown;
     font-size: 24px;
-    line-height: 1.1;
+    line-height: 1.2;
     margin: 0;
-    margin-left: 80px;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 700;
+    margin-left: 70px;
 
     @include mq(phablet) {
         margin-left: 0;
     }
 
     @include mq(tablet) {
-        font-size: 30px;
         line-height: 1.1;
         margin-left: 80px;
     }
 }
 
 .uit-player__info-artist {
-    color: $c-light-brown;
+    color: $c-white;
     display: block;
 }
 

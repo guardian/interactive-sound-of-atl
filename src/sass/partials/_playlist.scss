@@ -132,6 +132,11 @@ span.uit-track__artist {
     box-sizing: border-box;
     float: left;
     position: relative;
+    transition: background 0.2s linear;
+
+    &:hover {
+        background-color: $c-dark-brown;
+    }
 
     .sound-of--enhanced & {
         display: block;
