@@ -8,8 +8,8 @@
     transform: translateY(270px);
     transition: transform 0.2s ease-out;
     box-sizing: border-box;
-    height: calc(56.3vw + 90px); // 56.3 is 16:9 ratio as a percentage + 90px for space for buttons and title
-    transform: translateY(calc(56.3vw + 90px));
+    height: calc(56.3vw + 80px); // 56.3 is 16:9 ratio as a percentage + 90px for space for buttons and title
+    transform: translateY(calc(56.3vw + 80px));
     display: block;
 
     @include mq(phablet) {
@@ -30,11 +30,11 @@
         transform: translateY(56.3vw);
 
         @include mq(phablet) {
-            transform: translateY(90px);
+            transform: translateY(100px);
         }
 
         @include mq(desktop) {
-            transform: translateY(180px);
+            transform: translateY(190px);
         }
     }
 }
