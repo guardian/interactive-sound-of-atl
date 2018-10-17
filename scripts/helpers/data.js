@@ -54,8 +54,13 @@ function convertImageLinks() {
         if (data.playlist[i].artistImage) {
             data.playlist[i].artistImage = convertToGridUrl(data.playlist[i].artistImage, 1000);
         }
+
         if (data.playlist[i].pickedByImage) {
             data.playlist[i].pickedByImage = convertToGridUrl(data.playlist[i].pickedByImage, 140);
+        }
+
+        if (data.playlist[i].artistThumbnail) {
+            data.playlist[i].artistThumbnail = convertToGridUrl(data.playlist[i].artistThumbnail, 140);
         }
     }
 
