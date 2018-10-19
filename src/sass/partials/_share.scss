@@ -10,10 +10,6 @@
         position: absolute;
         left: -160px;
     }
-
-    @include mq(wide) {
-        left: -240px;
-    }
 }
 
 .uit-share__button {
@@ -22,11 +18,11 @@
     border-radius: 20px;
     float: left;
     margin-right: 4px;
-    border: 1px solid $c-brown;
+    background-color: $c-dark-brown;
     transition: all 0.2s linear;
 
     .uit-icon {
-        fill: $c-brown;
+        fill: $c-white;
         width: 100%;
         height: 100%;
         margin: auto;
@@ -34,8 +30,7 @@
     }
 
     &:hover {
-        background-color: $c-dark-brown;
-        border-color: $c-dark-brown;
+        background-color: $c-brown;
 
         .uit-icon {
             fill: $c-white;

@@ -84,7 +84,7 @@
     left: 10px;
     z-index: 2;
     border: 0;
-    background-color: $c-brown;
+    background-color: $c-dark-brown;
     cursor: pointer;
     transition: background 0.2s linear;
 
@@ -93,7 +93,7 @@
     }
 
     &:hover {
-        background-color: $c-dark-brown;
+        background-color: $c-brown;
     }
 
     svg {

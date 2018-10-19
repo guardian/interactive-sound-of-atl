@@ -1,50 +1,116 @@
-.uit-header__image {
-    width: 100%;
-    margin-top: 12px;
+.uit-header {
+    position: relative;
+    z-index: 3;
 }
 
-.uit-header__headline {
+.uit-header__image {
+    width: 100%;
+    max-width: 1100px;
+    margin: 24px auto;
+}
+
+.uit-header__word {
     position: absolute;
-    top: 23vw;
-    @include banding($c-brown);
-    padding: 6px 0;
-    margin: 4px 0;
+    display: block;
+    color: $c-white;
+    background-color: $c-dark-brown;
     font-family: 'Guardian Egyptian Web';
     font-weight: 700;
     font-size: 7vw;
-    line-height: 1.1;
-    color: $c-white;
+    line-height: 1.2;
+    padding: 0 0.9vw;
 
     @include mq(tablet) {
         font-size: 48px;
-        top: 190px;
+        padding: 0 5px;
     }
 
     @include mq(desktop) {
-        color: $c-black;
-        max-width: 220px;
-        left: 10px;
-        top: 215px;
-        font-size: 44px;
-
-        &__inner {
-            box-shadow: none;
-            background: none;
-        }
+        font-size: 72px;
     }
 
     @include mq(leftCol) {
-        left: -150px;
-        top: 250px;
-        font-size: 52px;
-        max-width: 240px;
+        font-size: 90px;
     }
 
-    @include mq(wide) {
-        left: -220px;
-        top: 291px;
-        font-size: 58px;
-        max-width: 290px;
+    &--1 {
+        top: 2vw;
+        left: 17.5vw;
+
+        @include mq(tablet) {
+            top: 20px;
+            left: 152px;
+        }
+
+        @include mq(desktop) {
+            top: 30px;
+            left: 190px;
+        }
+
+        @include mq(leftCol) {
+            top: 21px;
+            left: 58px;
+        }
+    }
+
+    &--2 {
+        top: 15vw;
+        right: 13vw;
+
+        @include mq(tablet) {
+            top: 118px;
+            right: 37px;
+        }
+
+        @include mq(desktop) {
+            top: 156px;
+            right: -178px;
+        }
+
+        @include mq(leftCol) {
+            top: 183px;
+            right: -171px;
+        }
+    }
+
+    &--3 {
+        top: 30vw;
+        left: 26.5vw;
+
+        @include mq(tablet) {
+            left: 214px;
+            top: 233px;
+        }
+
+        @include mq(desktop) {
+            left: 281px;
+            top: 306px;
+        }
+
+        @include mq(leftCol) {
+            left: 169px;
+            top: 360px;
+        }
+    }
+
+    &--4 {
+        top: 45vw;
+        right: 21vw;
+
+        @include mq(tablet) {
+            top: 353px;
+            right: 110px;
+        }
+
+        @include mq(desktop) {
+            top: 470px;
+            right: -91px;
+        }
+
+        @include mq(leftCol) {
+            top: 547px;
+            right: -73px;
+        }
     }
 }
 

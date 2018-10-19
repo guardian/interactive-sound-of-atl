@@ -130,7 +130,7 @@ span.uit-track__artist {
 
 .uit-track__button {
     z-index: 5;
-    background-color: $c-black;
+    background-color: $c-dark-brown;
     height: 48px;
     width:  48px;
     border-radius: 36px;
@@ -145,7 +145,7 @@ span.uit-track__artist {
     }
 
     &:hover {
-        background-color: $c-dark-brown;
+        background-color: $c-brown;
     }
 
     .sound-of--enhanced & {
