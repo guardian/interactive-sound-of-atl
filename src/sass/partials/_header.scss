@@ -34,42 +34,42 @@
     }
 
     &--1 {
-        top: 2vw;
-        left: 17.5vw;
+        top: 3vw;
+        left: 19.5vw;
 
         @include mq(tablet) {
-            top: 20px;
-            left: 152px;
+            top: 30px;
+            left: 165px;
         }
 
         @include mq(desktop) {
-            top: 30px;
-            left: 190px;
+            top: 40px;
+            left: 210px;
         }
 
         @include mq(leftCol) {
-            top: 21px;
-            left: 58px;
+            top: 45px;
+            left: 78px;
         }
     }
 
     &--2 {
-        top: 15vw;
-        right: 13vw;
+        top: 18vw;
+        right: 12vw;
 
         @include mq(tablet) {
-            top: 118px;
-            right: 37px;
+            top: 138px;
+            right: 20px;
         }
 
         @include mq(desktop) {
-            top: 156px;
-            right: -178px;
+            top: 186px;
+            right: -195px;
         }
 
         @include mq(leftCol) {
-            top: 183px;
-            right: -171px;
+            top: 213px;
+            right: -191px;
         }
     }
 
@@ -94,34 +94,44 @@
     }
 
     &--4 {
-        top: 45vw;
-        right: 21vw;
+        top: 47vw;
+        right: 17vw;
 
         @include mq(tablet) {
-            top: 353px;
-            right: 110px;
+            top: 375px;
+            right: 90px;
         }
 
         @include mq(desktop) {
-            top: 470px;
-            right: -91px;
+            top: 490px;
+            right: -120px;
         }
 
         @include mq(leftCol) {
-            top: 547px;
-            right: -73px;
+            top: 570px;
+            right: -130px;
         }
     }
 }
 
-.uit-header__standfirst {
-    padding: 3px 0 0;
-    font-family: 'Guardian Egyptian Web';
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.2;
+.uit-header__credit {
+    font-family: 'Guardian Sans Web';
+    font-size: 12px;
+    color: $c-grey;
 
-    @include mq(tablet) {
-        font-size: 24px;
+    @include mq($until: tablet) {
+        position: absolute;
+        left: 104px;
+        padding-left: 4px;
+        border-left: 1px solid $c-light-grey;
+        font-size: 12px;
+        line-height: 1.2;
+        max-width: 100px;
+        padding-top: 1px;
     }
+}
+
+.uit-header__triangle {
+    fill: $c-dark-brown;
+    height: .7em;
 }
