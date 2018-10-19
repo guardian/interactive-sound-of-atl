@@ -2,9 +2,13 @@
     <div class='uit-container'>
         <div class='uit-content'>
             <h1 class='uit-header__headline' itemprop='headline'>
-                {{ name }}
+                <span class='uit-header__headline__inner'>
+                    {{ name }}
+                </span>
             </h1>
-            <p class='uit-header__standfirst' itemprop='description'>{{ standfirst }}</p>
+        </div>
+        <img class='uit-header__image' src='{{ path }}/assets/header.jpg' />
+        <div class='uit-content'>
             {{> partials/share }}
         </div>
     </div>

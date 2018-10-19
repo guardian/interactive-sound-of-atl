@@ -1,16 +1,50 @@
-.uit-header {
-    overflow: auto;
+.uit-header__image {
+    width: 100%;
+    margin-top: 12px;
 }
 
 .uit-header__headline {
+    position: absolute;
+    top: 23vw;
+    @include banding($c-brown);
     padding: 6px 0;
+    margin: 4px 0;
     font-family: 'Guardian Egyptian Web';
     font-weight: 700;
-    font-size: 24px;
+    font-size: 7vw;
     line-height: 1.1;
+    color: $c-white;
 
     @include mq(tablet) {
         font-size: 48px;
+        top: 190px;
+    }
+
+    @include mq(desktop) {
+        color: $c-black;
+        max-width: 220px;
+        left: 10px;
+        top: 215px;
+        font-size: 44px;
+
+        &__inner {
+            box-shadow: none;
+            background: none;
+        }
+    }
+
+    @include mq(leftCol) {
+        left: -150px;
+        top: 250px;
+        font-size: 52px;
+        max-width: 240px;
+    }
+
+    @include mq(wide) {
+        left: -220px;
+        top: 291px;
+        font-size: 58px;
+        max-width: 290px;
     }
 }
 
@@ -24,8 +58,4 @@
     @include mq(tablet) {
         font-size: 24px;
     }
-}
-
-.uit-header .uit-share {
-    padding-bottom: 24px;
 }

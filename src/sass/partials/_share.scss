@@ -1,8 +1,19 @@
 .uit-share {
-    margin: 0;
-    padding: 0;
+    margin: 0 0 6px;
+    padding: 0 0 8px;
     list-style: none;
     overflow: hidden;
+    border-bottom: 1px solid $c-light-grey;
+
+    @include mq(leftCol) {
+        border-bottom: 0;
+        position: absolute;
+        left: -160px;
+    }
+
+    @include mq(wide) {
+        left: -240px;
+    }
 }
 
 .uit-share__button {
