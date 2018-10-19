@@ -277,22 +277,39 @@ span.uit-track__artist {
 .uit-track__rip {
     position: absolute;
     z-index: 2;
+
+    @include mq($until: tablet) {
+        width: 40%;
+    }
 }
 
 .uit-track__rip--left {
-    left: -12px;
+    left: 0;
     bottom: 6px;
+
+    @include mq(tablet) {
+        left: -12px;
+    }
 }
 
 .uit-track__rip--right {
-    right: -12px;
+    right: 0;
     top: 6px;
+
+    @include mq(tablet) {
+        right: -12px;
+    }
 }
 
 .uit-track__image {
-    margin: 12px 0 6px;
+    margin: 12px 12px 6px;
     display: none;
-    width: 100%;
+    width: calc(100% - 24px);
+
+    @include mq(tablet) {
+        margin: 12px 0 6px;
+        width: 100%;
+    }
 
     .is-expanded & {
         display: block;

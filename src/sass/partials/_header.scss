@@ -1,12 +1,14 @@
 .uit-header {
     position: relative;
     z-index: 3;
+    padding-top: 12px;
 }
 
 .uit-header__image {
     width: 100%;
     max-width: 1100px;
-    margin: 24px auto;
+    margin: 0 auto;
+    margin-bottom: 12px;
 }
 
 .uit-header__headline {
@@ -136,11 +138,11 @@
 
     @include mq(tablet) {
         font-size: 14px;
-        top: -42px;
+        top: -29px;
     }
 
     @include mq(leftCol) {
-        top: -45px;
+        top: -33px;
         right: -130px;
     }
 }
