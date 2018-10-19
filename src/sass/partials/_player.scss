@@ -65,16 +65,22 @@
     border-radius: 36px;
     box-sizing: border-box;
     float: left;
+    transition: border 0.2s linear;
 
     @include mq(tablet) {
         height: 60px;
         width: 60px;
     }
 
+    &:hover {
+        border-color: $c-dark-brown;
+    }
+
     svg {
         width: 100%;
         height: 100%;
         fill: $c-light-brown;
+        transition: transform 0.2s linear;
     }
 }
 
@@ -127,6 +133,10 @@
     svg {
         transform: rotate(180deg);
     }
+
+    &:hover svg {
+        transform: rotate(180deg) translateX(2px);
+    }
 }
 
 .uit-player__button--next {
@@ -141,6 +151,10 @@
 
     @include mq(wide) {
         right: 80px;
+    }
+
+    &:hover svg {
+        transform: translateX(2px);
     }
 }
 
