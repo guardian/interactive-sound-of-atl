@@ -23,7 +23,11 @@
         </div>
     </div>
     <div class='uit-track__hidden'>
-        <img class='uit-track__image' src='{{ artistImage }}' />
+        <div class='uit-track__image-wrapper'>
+            <img class='uit-track__rip uit-track__rip--right' src='{{ path }}/assets/right--{{ random }}.png' />
+            <img class='uit-track__image' src='{{ artistImage }}' />
+            <img class='uit-track__rip uit-track__rip--left' src='{{ path }}/assets/left--{{ random }}.png' />
+        </div>
         <div class='uit-track__body'>{{{ marked body }}}</div>
         <cite class='uit-track__cite'>Picked by {{{ marked  pickedBy }}}</cite>
     </div>

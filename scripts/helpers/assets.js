@@ -86,6 +86,10 @@ module.exports = {
             return '<p><span class=\'uit-drop\'><span class=\'uit-drop__inner\'>' + firstCharacter + '</span></span>' + intro;
         });
 
+        handlebars.registerHelper('random', function() {
+            return Math.floor(Math.random() * 3) + 1; 
+        })
+
         handlebars.registerHelper('inc', function(value, options) {
             return parseInt(value) + 1;
         });

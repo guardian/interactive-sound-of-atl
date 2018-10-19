@@ -255,6 +255,7 @@ span.uit-track__artist {
         padding-top: 12px;
         max-height: 2500px;
         visibility: visible;
+        overflow: visible;
 
         @include mq(desktop) {
             padding-top: 0;
@@ -266,6 +267,26 @@ span.uit-track__artist {
             display: none;
         }
     }
+}
+
+.uit-track__image-wrapper {
+    position: relative;
+    padding: 12px 0;
+}
+
+.uit-track__rip {
+    position: absolute;
+    z-index: 2;
+}
+
+.uit-track__rip--left {
+    left: -12px;
+    bottom: 6px;
+}
+
+.uit-track__rip--right {
+    right: -12px;
+    top: 6px;
 }
 
 .uit-track__image {
